@@ -61,6 +61,8 @@ section {
      flex-direction: column;
      align-items: center;
      align-content: center;
+
+     /*Add smooth behavior between sections*/
      scroll-snap-align: center;
 }
 
@@ -152,7 +154,7 @@ section#home {
 }
 
 section#gallery {
-     background: gray;
+     background: url('../images/background2.png') no-repeat center center/cover;
 }
 
 section#offer {
