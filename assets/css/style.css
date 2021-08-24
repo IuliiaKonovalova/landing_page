@@ -1,11 +1,11 @@
 :root {
      --clr-primary-200: #5200bb;
      --clr-primary-300: #ff00ff;
-     --clr-primary-500: #1e093f77;
+     --clr-primary-500: #1e093f93;
      --clr-primary-900: #1e093f;
-     --clr-neuteral-100: #fff6f2;
-     --clr-neuteral-300: #696969;
-     --clr-neuteral-900: #333;
+     --clr-nueteral-100: #fff6f2;
+     --clr-nueteral-300: #696969;
+     --clr-nueteral-900: #333;
 }
 
 /*Global settings*/
@@ -80,13 +80,13 @@ section {
      font-weight: 2rem;
      text-transform: uppercase;
      text-decoration: none;
-     color: var(--clr-neuteral-100);
+     color: var(--clr-nueteral-100);
 
      letter-spacing: 0.2rem;
 }
 
 section#home {
-     background: tomato;
+     background: url('../images/background1.png') no-repeat center center/cover;
 }
 
 section#gallery {
