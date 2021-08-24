@@ -4,9 +4,9 @@
      --clr-accent-500: #ff00ff;
      --clr-primary-500: #1e093f93;
      --clr-primary-900: #1e093f;
-     --clr-nueteral-100: #b2a8b8;
-     --clr-nueteral-300: #7d7483;
-     --clr-nueteral-900: #0c031a;
+     --clr-neutral-100: #b2a8b8;
+     --clr-neutral-300: #7d7483;
+     --clr-neutral-900: #0c031a;
 }
 
 /*Global settings*/
@@ -95,7 +95,7 @@ section {
      font-weight: 2rem;
      text-transform: uppercase;
      text-decoration: none;
-     color: var(--clr-nueteral-100);
+     color: var(--clr-neutral-100);
 
      letter-spacing: 0.2rem;
 }
@@ -132,23 +132,24 @@ section#home {
           #1e093f
      );
      border-radius: 1.5rem;
-     padding: 3rem 4rem;
+     padding: 2rem 2rem;
      display: flex;
      flex-direction: column;
      align-items: center;
+     max-width: 20rem;
 }
 
 .home_content-title {
      font-size: 6vh;
      padding-bottom: 2rem;
      font-style: italic;
-     color: var(--clr-nueteral-100);
+     color: var(--clr-neutral-100);
      text-transform: uppercase;
 }
 
 .home_content-paragraph {
      font-size: 2.5vh;
-     color: var(--clr-nueteral-300);
+     color: var(--clr-neutral-300);
      letter-spacing: 0.1rem;
      text-transform: uppercase;
 }
