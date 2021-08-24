@@ -1,11 +1,12 @@
 :root {
      --clr-primary-200: #5200bb;
-     --clr-primary-300: #ff00ff;
+     --clr-accent-300: #ff00ff91;
+     --clr-accent-500: #ff00ff;
      --clr-primary-500: #1e093f93;
      --clr-primary-900: #1e093f;
-     --clr-nueteral-100: #fff6f2;
-     --clr-nueteral-300: #696969;
-     --clr-nueteral-900: #333;
+     --clr-nueteral-100: #b2a8b8;
+     --clr-nueteral-300: #7d7483;
+     --clr-nueteral-900: #0c031a;
 }
 
 /*Global settings*/
@@ -24,7 +25,7 @@ body {
      font-family: Arial, Helvetica, sans-serif;
      font-size: 1.2rem;
      color: antiquewhite;
-     background-color: var(--clr-primary-900);
+     background-color: #41046d;
 }
 
 h1,
@@ -91,6 +92,51 @@ section {
 
 section#home {
      background: url('../images/background1.png') no-repeat center center/cover;
+}
+
+.home {
+     display: flex;
+     flex-direction: column;
+     justify-content: center;
+     align-items: center;
+}
+
+.home_content {
+     background-image: linear-gradient(
+          to right top,
+          #900493,
+          #7c0787,
+          #68097b,
+          #55086f,
+          #430762,
+          #3a075b,
+          #310753,
+          #28064c,
+          #250749,
+          #230846,
+          #200942,
+          #1e093f
+     );
+     border-radius: 1.5rem;
+     padding: 3rem 4rem;
+     display: flex;
+     flex-direction: column;
+     align-items: center;
+}
+
+.home_content-title {
+     font-size: 6vh;
+     padding-bottom: 2rem;
+     font-style: italic;
+     color: var(--clr-nueteral-100);
+     text-transform: uppercase;
+}
+
+.home_content-paragraph {
+     font-size: 2.5vh;
+     color: var(--clr-nueteral-300);
+     letter-spacing: 0.1rem;
+     text-transform: uppercase;
 }
 
 section#gallery {
