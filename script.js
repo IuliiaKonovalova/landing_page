@@ -1,11 +1,11 @@
-// // 'use strict';
+'use strict';
 
-// //Variables
+//Variables;
 
-// const hamburger = document.getElementById('nav-toggle-label');
+const hamburger = document.getElementById('hamburger');
 
-// const openMenu = function () {
-//      hamburger.classList.add('active');
-// };
+const openMenu = function () {
+     hamburger.classList.add('active');
+};
 
-// hamburger.addEventListener('click', openMenu());
+hamburger.addEventListener('click', openMenu);
