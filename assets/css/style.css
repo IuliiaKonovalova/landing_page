@@ -82,20 +82,6 @@ section {
      display: none;
 }
 
-.navbar ul li {
-     padding: 1rem;
-     margin: 0 5rem;
-}
-
-.navbar ul li a {
-     font-weight: 2rem;
-     text-transform: uppercase;
-     text-decoration: none;
-     color: var(--clr-neutral-100);
-
-     letter-spacing: 0.2rem;
-}
-
 /*Styling hamburger*/
 
 .hamburger {
@@ -117,16 +103,52 @@ section {
 
 /*Hamburger on click*/
 
+.hamburger.active {
+     position: fixed;
+}
+
 .hamburger.active .bar:nth-child(2) {
      opacity: 0;
 }
 
 .hamburger.active .bar:nth-child(1) {
      transform: translateY(0.95rem) rotate(45deg);
+     height: 0.3rem;
 }
 
 .hamburger.active .bar:nth-child(3) {
-     transform: translateY(-0.9rem) rotate(-45deg);
+     transform: translateY(-1rem) rotate(-45deg);
+     height: 0.3rem;
+}
+
+/*NavMenu on click*/
+
+.navbar.active {
+     background: var(--clr-neutral-500);
+}
+
+.navbar.active ul {
+     display: flex;
+     flex-direction: column;
+     list-style: none;
+     width: 100%;
+     justify-content: center;
+     align-content: center;
+     height: 100vh;
+}
+
+.navbar.active ul li {
+     padding: 1rem;
+     margin: 0 5rem;
+}
+
+.navbar.active ul li a {
+     font-weight: 2rem;
+     text-transform: uppercase;
+     text-decoration: none;
+     color: var(--clr-neutral-100);
+     font-size: 2rem;
+     letter-spacing: 0.2rem;
 }
 
 /*Sections styling*/
