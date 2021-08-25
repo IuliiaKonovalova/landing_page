@@ -75,7 +75,7 @@ section {
      background: var(--clr-primary-500);
      width: 100%;
      display: flex;
-     height: 3rem;
+     height: 5rem;
 }
 
 .navbar ul {
@@ -101,13 +101,15 @@ section {
 .hamburger {
      display: block;
      cursor: pointer;
+     margin-left: 1.5rem;
+     margin-top: 0.7rem;
 }
 
 .bar {
      display: block;
      width: 3rem;
      height: 0.2em;
-     margin: 0.5rem auto;
+     margin: 0.7rem auto;
      -webkit-transition: all 0.3s ease-in-out;
      transition: all 0.3s ease-in-out;
      background-color: var(--clr-neutral-100);
