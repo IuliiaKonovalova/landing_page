@@ -117,6 +117,18 @@ section {
 
 /*Hamburger on click*/
 
+.hamburger.active .bar:nth-child(2) {
+     opacity: 0;
+}
+
+.hamburger.active .bar:nth-child(1) {
+     transform: translateY(0.95rem) rotate(45deg);
+}
+
+.hamburger.active .bar:nth-child(3) {
+     transform: translateY(-0.9rem) rotate(-45deg);
+}
+
 /*Sections styling*/
 
 /*Section Home*/
