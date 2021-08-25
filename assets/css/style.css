@@ -124,7 +124,7 @@ section {
 /*NavMenu on click*/
 
 .navbar.active {
-     background: var(--clr-neutral-500);
+     background: var(--clr-primary-900);
 }
 
 .navbar.active ul {
@@ -135,6 +135,7 @@ section {
      justify-content: center;
      align-content: center;
      height: 100vh;
+     background: var(--clr-primary-900);
 }
 
 .navbar.active ul li {
