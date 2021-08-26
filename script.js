@@ -12,8 +12,6 @@ const navLink = document.getElementsByClassName('nav-link');
 
 const openMenu = function () {
      hamburger.classList.add('hamburger--active');
-
-     //  hamburger.classList.add('close');
      navbar.classList.add('active');
 };
 
@@ -34,12 +32,11 @@ for (let link of navLink) {
      link.addEventListener('click', closeMenu);
 }
 
-if (hamburger.classList.contains('active')) {
-     hamburger.addEventListener('click', closeMenu);
-}
-
 document.addEventListener('keydown', function (e) {
-     if (e.key === 'Escape' && hamburger.classList.contains('active')) {
+     if (
+          e.key === 'Escape' &&
+          hamburger.classList.contains('hamburger--active')
+     ) {
           closeMenu();
      }
 });
