@@ -11,4 +11,9 @@ const openMenu = function () {
      navbar.classList.add('active');
 };
 
+const closeMenu = function () {
+     hamburger.classList.remove('active');
+     navbar.classList.remove('active');
+};
+
 hamburger.addEventListener('click', openMenu);
