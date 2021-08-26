@@ -103,20 +103,20 @@ section {
 
 /*Hamburger on click*/
 
-.hamburger.active {
+.hamburger--active {
      position: fixed;
 }
 
-.hamburger.active .bar:nth-child(2) {
+.hamburger--active .bar:nth-child(2) {
      opacity: 0;
 }
 
-.hamburger.active .bar:nth-child(1) {
+.hamburger--active .bar:nth-child(1) {
      transform: translateY(0.95rem) rotate(45deg);
      height: 0.3rem;
 }
 
-.hamburger.active .bar:nth-child(3) {
+.hamburger--active .bar:nth-child(3) {
      transform: translateY(-1rem) rotate(-45deg);
      height: 0.3rem;
 }
@@ -139,8 +139,10 @@ section {
 }
 
 .navbar.active ul li {
-     padding: 1rem;
-     margin: 0 5rem;
+     margin: 4vh auto;
+     display: flex;
+     justify-content: center;
+     align-content: center;
 }
 
 .navbar.active ul li a {

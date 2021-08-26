@@ -11,7 +11,7 @@ const navLink = document.getElementsByClassName('nav-link');
 //Function openMenu
 
 const openMenu = function () {
-     hamburger.classList.add('active');
+     hamburger.classList.add('hamburger--active');
 
      //  hamburger.classList.add('close');
      navbar.classList.add('active');
@@ -20,7 +20,7 @@ const openMenu = function () {
 //Function closeMenu
 
 const closeMenu = function () {
-     hamburger.classList.remove('active');
+     hamburger.classList.remove('hamburger--active');
      navbar.classList.remove('active');
 };
 
@@ -30,7 +30,13 @@ hamburger.addEventListener('click', openMenu);
 
 // 2. Event Close Mobile Menu:
 
-// navLink.forEach((link) => link.addEventListener('click', closeMenu));
+for (let link of navLink) {
+     link.addEventListener('click', closeMenu);
+}
+
+if (hamburger.classList.contains('active')) {
+     hamburger.addEventListener('click', closeMenu);
+}
 
 document.addEventListener('keydown', function (e) {
      if (e.key === 'Escape' && hamburger.classList.contains('active')) {
