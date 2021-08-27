@@ -8,29 +8,39 @@ const navbar = document.getElementById('navbar');
 
 const navLink = document.getElementsByClassName('nav-link');
 
-//Function openMenu
+let menuOpen = false;
 
-const openMenu = function () {
-     hamburger.classList.add('hamburger--active');
-     navbar.classList.add('active');
-};
+// 1. Function Open/Close Mobile Menu on hamburger click:
 
-//Function closeMenu
+hamburger.addEventListener('click', () => {
+     if (!menuOpen) {
+          hamburger.classList.add('hamburger--active');
+          menuOpen = true;
+          navbar.classList.add('active');
+     } else {
+          hamburger.classList.remove('hamburger--active');
+          navbar.classList.remove('active');
+          menuOpen = false;
+     }
+});
+
+//Function closeMenu:
 
 const closeMenu = function () {
      hamburger.classList.remove('hamburger--active');
      navbar.classList.remove('active');
+     menuOpen = false;
 };
 
-// 1. Event Open Mobile Menu:
+// 2. Events Close Mobile Menu:
 
-hamburger.addEventListener('click', openMenu);
-
-// 2. Event Close Mobile Menu:
+// a) Close Mobile Menu on click links:
 
 for (let link of navLink) {
      link.addEventListener('click', closeMenu);
 }
+
+// b) Close Mobile Menu press Escape button:
 
 document.addEventListener('keydown', function (e) {
      if (
@@ -38,5 +48,6 @@ document.addEventListener('keydown', function (e) {
           hamburger.classList.contains('hamburger--active')
      ) {
           closeMenu();
+          menuOpen = false;
      }
 });
