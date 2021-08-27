@@ -123,11 +123,11 @@ section {
 
 /*NavMenu on click*/
 
-.navbar.active {
+.navbar--active {
      background: var(--clr-primary-900);
 }
 
-.navbar.active ul {
+.navbar--active ul {
      display: flex;
      flex-direction: column;
      list-style: none;
@@ -138,14 +138,14 @@ section {
      background: var(--clr-primary-900);
 }
 
-.navbar.active ul li {
+.navbar--active ul li {
      margin: 4vh auto;
      display: flex;
      justify-content: center;
      align-content: center;
 }
 
-.navbar.active ul li a {
+.navbar--active ul li a {
      font-weight: 2rem;
      text-transform: uppercase;
      text-decoration: none;

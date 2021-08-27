@@ -10,16 +10,18 @@ const navLink = document.getElementsByClassName('nav-link');
 
 let menuOpen = false;
 
+// Mobile Menu:
+
 // 1. Function Open/Close Mobile Menu on hamburger click:
 
 hamburger.addEventListener('click', () => {
      if (!menuOpen) {
           hamburger.classList.add('hamburger--active');
           menuOpen = true;
-          navbar.classList.add('active');
+          navbar.classList.add('navbar--active');
      } else {
           hamburger.classList.remove('hamburger--active');
-          navbar.classList.remove('active');
+          navbar.classList.remove('navbar--active');
           menuOpen = false;
      }
 });
@@ -28,7 +30,7 @@ hamburger.addEventListener('click', () => {
 
 const closeMenu = function () {
      hamburger.classList.remove('hamburger--active');
-     navbar.classList.remove('active');
+     navbar.classList.remove('navbar--active');
      menuOpen = false;
 };
 
