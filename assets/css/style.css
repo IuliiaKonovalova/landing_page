@@ -213,8 +213,59 @@ section#home {
      text-transform: uppercase;
 }
 
+/*Section gallery*/
+
 section#gallery {
      background: url('../images/background2.png') no-repeat center center/cover;
+}
+
+.gallery {
+     position: relative;
+     display: flex;
+     flex-direction: column;
+     justify-content: center;
+     width: 100%;
+}
+
+.carousel {
+     position: absolute;
+     /* max-width: 80%;
+     top: 50%;
+     transform: translateY(-50%); */
+     display: block;
+}
+
+.carousel__item--hidden {
+     display: none;
+}
+
+.carousel__actions {
+     display: flex;
+     justify-content: space-between;
+}
+.carousel__button {
+     border: none;
+     background: red;
+     cursor: pointer;
+     display: flex;
+     justify-content: space-between;
+     /* position: absolute;
+     top: 50%;
+     transform: translateY(-50%); */
+}
+
+.carousel__button--next {
+     position: absolute;
+     left: 50%;
+}
+
+#carousel__button--prev:focus {
+     outline: none;
+     border: none;
+}
+
+.btn-carousel {
+     font-size: 2rem;
 }
 
 section#offer {
