@@ -37,6 +37,11 @@ p {
      margin: 0;
 }
 
+img {
+     width: 100%;
+     display: block;
+}
+
 /*Specifying the size of each section*/
 /*Setting smooth scrolling*/
 
