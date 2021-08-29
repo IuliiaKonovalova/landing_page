@@ -125,6 +125,7 @@ section {
 
 .navbar--active {
      background: var(--clr-primary-900);
+     z-index: 999;
 }
 
 .navbar--active ul {
@@ -217,7 +218,6 @@ section#gallery {
 .gallery {
      position: relative;
      display: flex;
-     flex-direction: column;
      justify-content: center;
      width: 100%;
 }
@@ -227,39 +227,37 @@ section#gallery {
      height: 600px;
      min-width: 60%;
      margin: 0 auto;
-     /* display: flex;
-     justify-content: center; */
 }
 
 .carousel__track-container {
-     /* background: chartreuse; */
-
-     height: 100%;
-     position: relative;
+     position: block;
+     display: flex;
+     margin: 0;
+     padding: 0;
+     background-color: yellowgreen;
 }
 
 .carousel__track {
      padding: 0;
      margin: 0;
+
      list-style: none;
-     /* position: relative; */
 }
 
 .carousel__slide {
      position: absolute;
-     top: 0;
-     bottom: 0;
+     top: 50%;
+     transform: translateY(-50%);
      width: 100%;
-     /* height: 90%; */
-     background-color: #ff00ff0c;
      border-radius: 1.5rem;
      display: flex;
      justify-content: center;
      align-items: center;
 }
 .carousel__images {
-     width: 90%;
+     width: 100%;
      object-fit: cover;
+     border-radius: 1.5rem;
 }
 
 .carousel__button {
@@ -268,12 +266,12 @@ section#gallery {
      transform: translateY(-50%);
      background: transparent;
      cursor: pointer;
-     z-index: 999;
+     z-index: 333;
      border: none;
 }
 
 .btn-carousel {
-     font-size: 3rem;
+     font-size: 2rem;
      color: var(--clr-neutral-100);
 }
 
@@ -286,12 +284,8 @@ section#gallery {
 }
 
 .carousel__nav {
-     /* background-color: red; */
-     display: flex;
-     justify-content: center;
-     padding: 10px 0;
-     /* position: absolute;
-     bottom: 5%; */
+     position: absolute;
+     top: 65%;
 }
 
 .carousel__indicator {
@@ -301,6 +295,28 @@ section#gallery {
      height: 0.6rem;
      border-radius: 50%;
      margin-left: 1rem;
+}
+
+.rgb::after {
+     content: '';
+     background: linear-gradient(
+               45deg,
+               #1f0455 0%,
+               #39089c 10%,
+               #5f15f2 20%,
+               #ba0cf8 30%,
+               #fb07d9 40%,
+               #e707fb 50%,
+               #c615f2 60%,
+               #f215f2 70%,
+               #5f15f2 80%,
+               #5f15f2 90%,
+               #1f0455 100%
+          )
+          repeat 0% 0% / 300% 100%;
+     position: absolute;
+     inset: -3px;
+     border-radius: 16px;
 }
 /*Offer Section*/
 
