@@ -114,3 +114,21 @@ function slideNext() {
      );
      current++;
 }
+
+// Click Previous Button
+prevButton.addEventListener('click', function () {
+     if (current === 0) {
+          current = slides.length;
+     }
+     slidePrev();
+});
+
+// Click Next Button
+nextButton.addEventListener('click', function () {
+     if (current === slides.length - 1) {
+          current = -1;
+     }
+     slideNext();
+});
+
+startSlide();
