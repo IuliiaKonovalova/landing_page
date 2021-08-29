@@ -23,6 +23,8 @@ const nextButton = document.querySelector('#carousel__button--next');
 const carouselNav = document.querySelector('.carousel__nav');
 const dots = document.querySelectorAll('.carousel__indicator');
 
+let current = 0;
+
 //
 ///////////////    Mobile Menu:   /////////////////
 //
@@ -68,3 +70,26 @@ document.addEventListener('keydown', function (e) {
           menuOpen = false;
      }
 });
+
+//
+///////////////    Mobile Menu:   /////////////////
+//
+
+function reset() {
+     for (let i = 0; i < slides.length; i++) {
+          slides[i].classList.replace(
+               'carousel__images--visible',
+               'carousel__images--hidden'
+          );
+     }
+}
+
+// Start Slider the first image
+
+function startSlide() {
+     reset();
+     slides[0].classList.replace(
+          'carousel__images--hidden',
+          'carousel__images--visible'
+     );
+}
