@@ -225,12 +225,8 @@ section#gallery {
 
 .carousel {
      position: relative;
-     /* max-height: 40rem;
-     min-height: 35rem; */
      max-width: 90%;
      margin: 0 auto;
-     /* display: flex;
-justify-content: center; */
 }
 
 .carousel__track-container {
@@ -249,12 +245,28 @@ justify-content: center; */
 
 .carousel__slide {
      width: 100%;
-     /* margin: auto 2rem; */
      border-radius: 1.5rem;
      display: flex;
      justify-content: center;
      align-items: center;
 }
+
+.carousel__track--top {
+     width: 100%;
+}
+
+.carousel__track--top::after {
+     content: '';
+     display: table;
+}
+
+.carousel__images--hidden {
+     display: none;
+}
+
+/* .carousel__images--visible {
+     position: absolute;
+} */
 .carousel__images {
      object-fit: cover;
      object-position: 100% 0;
@@ -379,7 +391,6 @@ section#contact {
           text-transform: uppercase;
           text-decoration: none;
           color: var(--clr-neutral-100);
-
           letter-spacing: 0.2rem;
      }
 
@@ -389,68 +400,21 @@ section#contact {
 
      /*Section gallery*/
 
-     section#gallery {
-          background: url('../images/background2.png') no-repeat center
-               center/cover;
-     }
-
-     .gallery {
-          position: relative;
-          display: flex;
-          flex-direction: column;
-          justify-content: center;
-          width: 100%;
-     }
-
      .carousel {
           position: relative;
           max-height: 40rem;
           min-height: 28rem;
           min-width: 60%;
           margin: 0 auto;
-          /* display: flex;
-     justify-content: center; */
      }
 
-     .carousel__track-container {
-          margin: 0;
-          padding: 0;
-     }
-
-     .carousel__track {
-          padding: 0;
-          margin: 0;
-          list-style: none;
-          /* position: block; */
-     }
-
-     .carousel__slide {
-          width: 100%;
-          border-radius: 1.5rem;
-          display: flex;
-          justify-content: center;
-          align-items: center;
-     }
      .carousel__images {
           max-height: 40rem;
-          object-fit: cover;
-          z-index: 333;
-          width: 100%;
      }
 
      .carousel__button {
-          position: absolute;
           top: 50%;
           transform: translateY(-50%);
-          background: transparent;
-          cursor: pointer;
-          z-index: 999;
-          border: none;
-     }
-
-     .btn-carousel {
-          font-size: 3rem;
-          color: var(--clr-neutral-100);
      }
 
      .carousel__button--prev {
@@ -462,19 +426,6 @@ section#contact {
      }
 
      .carousel__nav {
-          position: absolute;
-          left: 50%;
           bottom: -20%;
-          transform: translateX(-50%);
-          transform: translateY();
-     }
-
-     .carousel__indicator {
-          border: none;
-          background-color: var(--clr-neutral-100);
-          width: 0.6rem;
-          height: 0.6rem;
-          border-radius: 50%;
-          margin-left: 1rem;
      }
 }
