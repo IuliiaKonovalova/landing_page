@@ -93,3 +93,24 @@ function startSlide() {
           'carousel__images--visible'
      );
 }
+
+// Previous Slide
+
+function slidePrev() {
+     reset();
+     slides[current - 1].classList.replace(
+          'carousel__images--hidden',
+          'carousel__images--visible'
+     );
+     current--;
+}
+
+// Next Slide
+function slideNext() {
+     reset();
+     slides[current + 1].classList.replace(
+          'carousel__images--hidden',
+          'carousel__images--visible'
+     );
+     current++;
+}
