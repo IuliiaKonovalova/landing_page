@@ -21,7 +21,7 @@ const prevButton = document.querySelector('#carousel__button--prev');
 const nextButton = document.querySelector('#carousel__button--next');
 
 const carouselNav = document.querySelector('.carousel__nav');
-const dots = document.querySelectorAll('.carousel__indicator');
+const dots = document.querySelectorAll('.carousel__nav--item');
 
 let current = 0;
 
@@ -81,6 +81,10 @@ function reset() {
                'carousel__images--visible',
                'carousel__images--hidden'
           );
+          dots[i].classList.replace(
+               'carousel__nav--active',
+               'carousel__nav--disable'
+          );
      }
 }
 
@@ -92,6 +96,10 @@ function startSlide() {
           'carousel__images--hidden',
           'carousel__images--visible'
      );
+     dots[0].classList.replace(
+          'carousel__nav--disable',
+          'carousel__nav--active'
+     );
 }
 
 // Previous Slide
@@ -102,6 +110,10 @@ function slidePrev() {
           'carousel__images--hidden',
           'carousel__images--visible'
      );
+     dots[current - 1].classList.replace(
+          'carousel__nav--disable',
+          'carousel__nav--active'
+     );
      current--;
 }
 
@@ -111,6 +123,10 @@ function slideNext() {
      slides[current + 1].classList.replace(
           'carousel__images--hidden',
           'carousel__images--visible'
+     );
+     dots[current + 1].classList.replace(
+          'carousel__nav--disable',
+          'carousel__nav--active'
      );
      current++;
 }
